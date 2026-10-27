@@ -16,3 +16,15 @@ function valueClear() {
 function calculate() {
     input.value = eval(input.value)
 }
+
+function addValue(value) {
+    var last = input.value.slice(-1);
+
+    if (last == "+" || last == "-" || last == "*" || last == "/" || last == "%") {
+        if (value == "+" || value == "-" || value == "*" || value == "/" || value == "%") {
+            return;
+        }
+    }
+
+    input.value += value;
+}
